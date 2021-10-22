@@ -6,60 +6,45 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+<p><a target="_blank" rel="noopener noreferrer" href="/"><img src="https://github.com/fmathlouthi/Laravel-8-RealTime-CRUD-Using-Google-Firebase/blob/master/Laravel%20RealTime%20CRUD%20Using%20Google%20Firebase%20-%20Google%20Chrome%202021-10-22%2016-19-02.gif" alt="Laravel + Vue.js" data-canonical-src="https://github.com/fmathlouthi/Laravel-8-RealTime-CRUD-Using-Google-Firebase/blob/master/Laravel%20RealTime%20CRUD%20Using%20Google%20Firebase%20-%20Google%20Chrome%202021-10-22%2016-19-02.gif" style="max-width: 100%;"></a></p>
+## About project
 
-## About Laravel
+Laravel real-time CRUD using Google Firebase.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Step 1 : Create a Firebase Project
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Let’s first create a firebase project and take firebase credentials. Go to
+https://firebase.google.com/ and create a project.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Step 2 : Create a Laravel Project
 
-## Laravel Sponsors
+composer create-project --prefer-dist laravel/laravel laravelproject
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Step 3 : Register View Route
 
-### Premium Partners
+- Go to routes >> web.php and register this route:
+- <?php
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Route::view('customers', 'customers');
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Step 4 : Configure Firebase Setting
 
-## Code of Conduct
+Now, we are configuring google firebase setting in our laravel application. so, open config/services.php file and set following configuration in this file.
+
+## Step 5 : Add a Blade File
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Step 6 : Run and Test
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-  run php artisan serve
 
-## License
+- Now visit the route(http://localhost:8000/customers) to see the form. You can start testing by adding data.
+
+
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
