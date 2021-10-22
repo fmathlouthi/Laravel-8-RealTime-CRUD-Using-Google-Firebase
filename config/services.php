@@ -30,10 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'firebase' => [
-        'api_key' => 'AIzaSyDFMMKxn92cZauDHwhQm8f7T6sfUkanvV8', // Only used for JS integration
-        'auth_domain' => 'laravel-firebase-crud-270af.firebaseapp.com', // Only used for JS integration
-        'database_url' => 'https://laravel-firebase-crud-270af-default-rtdb.firebaseio.com/',
-        'storage_bucket' => 'laravel-firebase-crud-270af.appspot.com', // Only used for JS integration
+        'api_key' => 'api_key', // Only used for JS integration
+        'auth_domain' => 'auth_domain', // Only used for JS integration
+        'database_url' => 'database_url',
+        'storage_bucket' => 'storage_bucket', // Only used for JS integration
     ],
 
 ];
